@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dcullumdh
+  api_key: '278318773645231'
+  api_secret: a_KA2Rt-1eKmCD3WPg3ZIjux2tQ
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dcullumdh
+  api_key: '278318773645231'
+  api_secret: a_KA2Rt-1eKmCD3WPg3ZIjux2tQ
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dcullumdh
+  api_key: '278318773645231'
+  api_secret: a_KA2Rt-1eKmCD3WPg3ZIjux2tQ
+  enhance_image_tag: true
+  static_image_support: false
