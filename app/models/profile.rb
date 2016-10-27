@@ -9,5 +9,16 @@ class Profile < ApplicationRecord
   validates :postcode, presence: true
 
   mount_uploader :picture, ProfilePicUploader
+ 	
+  geocoded_by :full_street_address
+  after_validation :geocode
+
+  def full_street_address
+  	[street, address, state, postcode, country].compact.join(',')
+  end
+
+
+ 	extend FriendlyId
+  friendly_id :first_name, use: :slugged 
 
 end

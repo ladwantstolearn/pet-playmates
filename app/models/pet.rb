@@ -6,4 +6,8 @@ class Pet < ApplicationRecord
   validates :size, presence: true
 
   mount_uploader :picture, ProfilePicUploader
+
+  extend FriendlyId
+  friendly_id :name, use: :slugged 
+
 end

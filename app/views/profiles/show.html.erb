@@ -54,6 +54,17 @@
   <%= @profile.user %>
 </p>
 
+<p> 
+<strong>Lat:</strong>
+<%= @profile.latitude %>
+</p>
+
+<p> 
+<strong>Long:</strong>
+<%= @profile.longitude %>
+</p>
+
+
 <% if current_user.profile == @profile %>
   <%= link_to 'Edit', edit_profile_path(@profile), class:'btn btn-warning' %>
 <% end %>
@@ -62,6 +73,7 @@
 
 <div class="col-md-4">
   <% @profile.user.pets.each do |pet| %>
+  <td><%= image_tag(pet.picture_url(:thumbnail),:width =>50, :height=>50) %></td>
   <div class="panel panel-default">
     <div class="panel-body">
         <%= pet.name %>
